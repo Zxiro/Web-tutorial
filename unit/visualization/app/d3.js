@@ -4,27 +4,15 @@ const data = {
 }
 
 $(() => {
-
-  // initialize
-  const chart = d3.select('#chart')
+  // Step 1:
 
   $('button').click(e => {
     const code = $(e.target).data('code')
-    const bars = chart.selectAll('svg').data(data[code])
-    bars.exit().remove()
-    const entered = bars.enter().append('svg').attr('x', (v, i) => 60 + i * 150)
-    entered.append('text').attr('x', 20)
-    entered.append('rect').attr('width', 100)
-    bars.select('text')
-      //.transition().duration(1000)
-      .attr('y', (v, i) => 440 - v * 400)
-      .text((v, i) => (v * 100).toFixed(1) + '%')
-    bars.select('rect')
-      //.transition().duration(1000)
-      .attr({ 
-        height: (v, i) => v * 400,
-        y: (v, i) => 450 - v * 400,
-      })
+    // Step 2:
+
+    // Step 3:
+
+    // Step 4:
   })
   $('button:first-child').click()
 

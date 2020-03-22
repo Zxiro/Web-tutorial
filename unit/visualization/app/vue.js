@@ -1,7 +1,3 @@
 import Vue from 'vue'
-import App from './vue.vue'
+// Step 1
 
-new Vue({
- el: '#app',
- render: h => h(App),
-})

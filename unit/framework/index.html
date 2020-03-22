@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Semantic UI Demo</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+    <!-- step 1.1 -->
     <style>
       .block {
         display: none;
@@ -27,9 +27,9 @@
   </head>
   <body>
     <div class='ui container'>
-      <div class='ui menu'>
+      <div class='ui inverted red menu'>
         <div class='item'>
-          <img class='ui tiny image' src='https://semantic-ui.com/images/logo.png'>
+          <img class='ui mini image' src='https://semantic-ui.com/images/logo.png'>
         </div>
         <a class='item'>Introduction</a>
         <a class='item'>Getting Start</a>
@@ -57,11 +57,11 @@
               Just add the below code in your HTML header：
             </div>
             <div class='code'>
-              &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css"&gt;
+              &lt link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css" &gt
               <br>
-              &lt;script src="https://code.jquery.com/jquery-3.2.1.js"&gt;&lt;/script&gt;
+              &lt script src="https://code.jquery.com/jquery-3.2.1.js" &gt &lt /script &gt
               <br>
-              &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"&gt;&lt;/script&gt;
+               &ltscript src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js" &gt &lt/script &gt
             </div>
           </div>
         </div>
@@ -69,23 +69,22 @@
         <div class='block'>
           <h2 class='ui header'>Button</h2>
           <div class='example'>
-            <button class="ui button">Follow</button>
+            <!-- Step 2.1 -->
             <div class='code'>
-              &lt;button class="ui button"&gt;
-              <br>
-              &emsp;Follow
-              <br>
-              &lt;/button&gt;
+              &lt button class="ui button" &gt
+              Follow
+              &lt /button &gt
             </div>
           </div>
           <div class='example'>
-            <button class="ui primary button">Save</button>
+            <!-- Step 2.2 -->
             <div class='code'>
-              &lt;button class="ui primary button"&gt;
+              &lt button class="ui primary button"&gt
               <br>
-              &emsp;Save
+              &nbsp &nbsp Save
               <br>
-              &lt;/button&gt;
+              &lt /button &gt
+
             </div>
           </div>
           <h2 class='ui header'>Input</h2>
@@ -94,11 +93,11 @@
               <input type="text" placeholder="Search...">
             </div>
             <div class='code'>
-              &lt;div class="ui input"&gt;
+              &lt div class="ui input" &gt
               <br>
-              &emsp;&lt;input type="text" placeholder="Search..."&gt;
+              &nbsp &nbsp &lt input type="text" placeholder="Search..." &gt
               <br>
-              &lt;/div&gt;
+              &lt /div &gt
             </div>
           </div>
           <div class='example'>
@@ -107,13 +106,13 @@
               <i class="search icon"></i>
             </div>
             <div class='code'>
-              &lt;div class="ui left icon input loading"&gt;
+              &lt div class="ui left icon input loading" &gt
               <br/>
-              &emsp;&lt;input type="text" placeholder="Search..."&gt;
+              &nbsp &nbsp &lt input type="text" placeholder="Search..." &gt
               <br/>
-              &emsp;&lt;i class="search icon"&gt;&lt;/i&gt;
+              &nbsp &nbsp &lt i class="search icon" &gt &lt /i &gt
               <br/>
-              &lt;/div&gt;
+              &lt /div &gt
             </div>
           </div>
           <h2 class='ui header'>More</h2>
@@ -143,8 +142,7 @@
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+    <!-- step 1.2 -->
     <script>
       $('a.item').click(e => {
         $(`.block:nth-child(${$('a.item.active').index() + 1})`).transition('scale')
@@ -154,6 +152,7 @@
       })
       $('a.item:nth-child(2)').click()
 
+      //-- Step 3 code here --
       $('.ui.buttons .basic.button').click(e => {
         let action = $(e.target).html()
         $('.demo').transition(action)
